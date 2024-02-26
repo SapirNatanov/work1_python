@@ -2,6 +2,11 @@
 # Dor Maudi 207055138.
 
 def is_prime(value):
+    """
+    the functions get a number and check if it is a prime number.
+    :param value: an integer value to be checked.
+    :return: whether it is a prime number or not.
+    """
     if value <= 1:
         return False
     if value <= 3:
@@ -17,6 +22,11 @@ def is_prime(value):
 
 
 def factorSum(num):
+    """
+    the functions get a number and return the sum of the factor.
+    :param num: integer value to be factored.
+    :return: the sum of the factors.
+    """
     primes = set()
     i = 2
     if num == 1:
@@ -32,6 +42,11 @@ def factorSum(num):
 
 
 def onlyPositive(f):
+    """
+    the functions get a function that takes a number and returns only a positive number.
+    :param f: a function that takes 1 argument.
+    :return: a lambda that returns the positive number.
+    """
     return lambda z: f(abs(z))
 
 
@@ -40,6 +55,12 @@ def f1(x):
 
 
 def interceptPoint(tupA, tupB):
+    """
+    the functions get two tuples and returns the intercept of the two tuples.
+    :param tupA: a tuple with numbers.
+    :param tupB: a tuple with numbers.
+    :return: the intercept of the two tuples.
+    """
     if tupA[0] - tupB[0] == 0 and tupA[1] - tupB[1] != 0:
         return "None"
     elif tupA[0] - tupB[0] == 0 and tupA[1] - tupB[1] == 0:
@@ -53,6 +74,13 @@ def interceptPoint(tupA, tupB):
 
 
 def printNumbers(x, y, z):
+    """
+    the function gets three numbers and prints all the numbers that are between them and different from z.
+    :param x: integer to start the test from.
+    :param y: integer to end the test from.
+    :param z: integer a number to avoid printing.
+    :return: prints all numbers except z.
+    """
     if y == x:
         print(y)
         return
@@ -67,6 +95,13 @@ def printNumbers(x, y, z):
 
 
 def listProduct(listA, listB):
+    """
+    the function takes two lists and returns the new list that contains all the numbers in the first list
+    amount of times in the second list.
+    :param listA: a list of numbers that are going to be repeated.
+    :param listB: a list of numbers that are telling how many times to repeat.
+    :return: a new list with the numbers from the first list the amount of times in the second list.
+    """
     list = []
     for i in range(len(listA)):
         for j in range(listB[i]):
@@ -74,6 +109,11 @@ def listProduct(listA, listB):
     return list
 
 def analyze(gradeStr):
+    """
+    the function takes a string of numbers and get all the grades that are greater or equal to 85.
+    :param gradeStr: a string containing grades.
+    :return: a number the represents the amount of numbers greater or equal to 85.
+    """
     counter = 0
     grades = []
     for i in gradeStr.split(", "):
